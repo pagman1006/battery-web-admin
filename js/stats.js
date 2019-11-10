@@ -1,5 +1,5 @@
 $(function() {
-    var data = [ ["January", 10], ["February", 8], ["March", 4], ["April", 13], ["May", 17], ["June", 9] ];
+    var data = [ ["Enero", 10], ["Febrero", 8], ["Marzo", 4], ["Abril", 13], ["Mayo", 17], ["Junio", 9] ];
 
     $.plot("#catchart", [ data ], {
         series: {
@@ -104,12 +104,12 @@ doPlot("right");
 Morris.Bar({
     element: 'hero-bar',
     data: [
-        {device: '1', sells: 136},
-        {device: '3G', sells: 1037},
-        {device: '3GS', sells: 275},
-        {device: '4', sells: 380},
-        {device: '4S', sells: 655},
-        {device: '5', sells: 1571}
+        {device: 'LTH', sells: 136},
+        {device: 'America', sells: 1037},
+        {device: 'Duracel', sells: 275},
+        {device: 'Duralast', sells: 380},
+        {device: 'Gonher', sells: 655},
+        {device: 'Optima', sells: 1571}
     ],
     xkey: 'device',
     ykeys: ['sells'],
@@ -125,10 +125,10 @@ Morris.Bar({
 Morris.Donut({
     element: 'hero-donut',
     data: [
-        {label: 'Direct', value: 25 },
-        {label: 'Referrals', value: 40 },
-        {label: 'Search engines', value: 25 },
-        {label: 'Unique visitors', value: 10 }
+        {label: 'Tienda', value: 25 },
+        {label: 'Referidos', value: 40 },
+        {label: 'Buscadores', value: 25 },
+        {label: 'Única visita', value: 10 }
     ],
     colors: ["#30a1ec", "#76bdee", "#c4dafe"],
     formatter: function (y) { return y + "%" }
@@ -150,22 +150,22 @@ Morris.Donut({
 
 // Morris Line Chart
 var tax_data = [
-    {"period": "2013-04", "visits": 2407, "signups": 660},
-    {"period": "2013-03", "visits": 3351, "signups": 729},
-    {"period": "2013-02", "visits": 2469, "signups": 1318},
-    {"period": "2013-01", "visits": 2246, "signups": 461},
-    {"period": "2012-12", "visits": 3171, "signups": 1676},
-    {"period": "2012-11", "visits": 2155, "signups": 681},
-    {"period": "2012-10", "visits": 1226, "signups": 620},
-    {"period": "2012-09", "visits": 2245, "signups": 500}
+    {"period": "2013-04", "visitas": 2407, "pedidos": 660},
+    {"period": "2013-03", "visitas": 3351, "pedidos": 729},
+    {"period": "2013-02", "visitas": 2469, "pedidos": 1318},
+    {"period": "2013-01", "visitas": 2246, "pedidos": 461},
+    {"period": "2012-12", "visitas": 3171, "pedidos": 1676},
+    {"period": "2012-11", "visitas": 2155, "pedidos": 681},
+    {"period": "2012-10", "visitas": 1226, "pedidos": 620},
+    {"period": "2012-09", "visitas": 2245, "pedidos": 500}
 ];
 Morris.Line({
     element: 'hero-graph',
     data: tax_data,
     xkey: 'period',
     xLabels: "month",
-    ykeys: ['visits', 'signups'],
-    labels: ['Visits', 'User signups']
+    ykeys: ['visitas', 'pedidos'],
+    labels: ['Visitas', 'Pedidos levantados']
 });
 
 
@@ -174,20 +174,20 @@ Morris.Line({
 Morris.Area({
     element: 'hero-area',
     data: [
-        {period: '2010 Q1', iphone: 2666, ipad: null, itouch: 2647},
-        {period: '2010 Q2', iphone: 2778, ipad: 2294, itouch: 2441},
-        {period: '2010 Q3', iphone: 4912, ipad: 1969, itouch: 2501},
-        {period: '2010 Q4', iphone: 3767, ipad: 3597, itouch: 5689},
-        {period: '2011 Q1', iphone: 6810, ipad: 1914, itouch: 2293},
-        {period: '2011 Q2', iphone: 5670, ipad: 4293, itouch: 1881},
-        {period: '2011 Q3', iphone: 4820, ipad: 3795, itouch: 1588},
-        {period: '2011 Q4', iphone: 15073, ipad: 5967, itouch: 5175},
-        {period: '2012 Q1', iphone: 10687, ipad: 4460, itouch: 2028},
-        {period: '2012 Q2', iphone: 8432, ipad: 5713, itouch: 1791}
+        {period: '2010 Q1', LTH: 2666, America: null, Gonher: 2647},
+        {period: '2010 Q2', LTH: 2778, America: 2294, Gonher: 2441},
+        {period: '2010 Q3', LTH: 4912, America: 1969, Gonher: 2501},
+        {period: '2010 Q4', LTH: 3767, America: 3597, Gonher: 5689},
+        {period: '2011 Q1', LTH: 6810, America: 1914, Gonher: 2293},
+        {period: '2011 Q2', LTH: 5670, America: 4293, Gonher: 1881},
+        {period: '2011 Q3', LTH: 4820, America: 3795, Gonher: 1588},
+        {period: '2011 Q4', LTH: 15073, America: 5967, Gonher: 5175},
+        {period: '2012 Q1', LTH: 10687, America: 4460, Gonher: 2028},
+        {period: '2012 Q2', LTH: 8432, America: 5713, Gonher: 1791}
     ],
     xkey: 'period',
-    ykeys: ['iphone', 'ipad', 'itouch'],
-    labels: ['iPhone', 'iPad', 'iPod Touch'],
+    ykeys: ['LTH', 'America', 'Gonher'],
+    labels: ['LTH', 'America', 'Gonher'],
     lineWidth: 2,
     hideHover: 'auto',
     lineColors: ["#81d5d9", "#a6e182", "#67bdf8"]
